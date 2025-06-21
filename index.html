@@ -863,6 +863,30 @@
             width: 28px;
         }
     } 
+	 #rAstigmaticFan {
+        position: absolute !important; /* Override JS positioning */
+        top: 50% !important; /* Center vertically */
+        left: 50% !important; /* Center horizontally */
+        transform: translate(-50%, -50%) !important; /* Adjust for element's own size */
+        width: 400px !important; /* Fixed width (adjust as needed) */
+        height: 333px !important; /* Fixed height, maintaining 600:500 aspect ratio (adjust as needed) */
+        margin: 0 !important; /* Remove any external margins */
+    }
+
+    /* Ensure the parent container allows absolute positioning */
+    #otherChart {
+        position: relative; /* Add this if not already present for #otherChart */
+        overflow: hidden; /* Hide any overflow if the SVG becomes too big for the screen */
+    }
+
+    /* You might also want to set min/max dimensions for its parent .chart R if needed */
+    .chart.R#R6 { /* Target the specific parent div */
+        display: block !important; /* Ensure it's always visible if needed */
+        position: absolute !important; /* If you want this specific chart's container to also be absolutely positioned */
+        width: 100% !important; /* Ensure the container stretches */
+        height: 100% !important;
+        background-color: transparent !important; /* Or your desired background */
+    }
 </style>
 </head>
 <body>
